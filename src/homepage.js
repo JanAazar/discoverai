@@ -8,6 +8,7 @@ import chatbots from './assets/chatbot.png';
 import codeassitants from './assets/code-assistant.png';
 import marketing from './assets/marketing.png';
 import image_video from './assets/image-video-generator.jpg';
+import logo from './assets/logo-main.png';
 
 const styles = {
   ImageContainer: {

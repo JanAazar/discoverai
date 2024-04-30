@@ -3,6 +3,7 @@ import backgroundImage from "./assets/background-image.jpeg";
 import inner_icon from "./inner_icon.js";
 import data from "./company_data.js";
 import { useNavigate} from 'react-router-dom';
+import logo from "./assets/logo-main.png";
 
 const styles = {
   ImageContainer: {
@@ -159,7 +160,7 @@ const Picks_one = () => {
           }}
           onClick={() => pageChange()}
         >
-          DiscoverAI
+          <img src={logo} style={{width:'10vw', height:'3vw', marginLeft:'0.5vw'}}/>
         </div>
         <input style={styles.Input} placeholder="Search for AI companies" />
         <div

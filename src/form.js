@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import backgroundImage from './assets/background-image.jpeg';
 import {useState} from 'react';
+import logo from './assets/logo-main.png';
 
 
 const styles = {
@@ -175,9 +176,8 @@ const Form = () => {
           }}
           onClick={() => pageChange()}
         >
-          DiscoverAI
+          <img src={logo} style={{width:'10vw', height:'3vw', marginLeft:'0.5vw'}}/>
         </div>
-
             <div style={{...styles.Text, fontSize:'3vw', fontWeight:'bold', marginTop:'10vh'}}>
                 Post your company
             </div>
