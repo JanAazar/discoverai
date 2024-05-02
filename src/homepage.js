@@ -57,7 +57,7 @@ const styles = {
     //top: size(42),
     //left: '51%', 
     //transform: 'translateX(-52%)',
-    width: size(60),
+    width: '50vw',
     height: size(3),
     border: '0',
     padding: '0px 1vw',
@@ -148,7 +148,7 @@ const Homepage = () => {
     <div style={{position: 'absolute', top: size(42), left: '50%', transform: 'translateX(-50%)', width: size(75), height: size(3), justifyContent:'center', alignItems:'center', display:'flex'}}>
   <form style={{ display: 'flex', alignItems: 'center' }}>
     <input style={styles.Input} placeholder='Describe what you are looking for' onKeyDown={handleKeyPress}/>
-    <button type='submit' onClick={() => pageChange("three")} style={{marginLeft:size(-3),backgroundColor:'transparent',border:'0'}}>
+    <button type='submit' onClick={() => pageChange("three")} style={{marginLeft:size(-3.5),backgroundColor:'transparent',border:'0'}}>
       <img src={searchIcon} style={{width: size(1.3), height: size(1.3)}} />
     </button>
   </form>
