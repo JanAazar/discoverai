@@ -32,16 +32,16 @@ const styles = {
   },
   Button: {
     cursor: 'pointer',
-    top: `calc((2vh + 2vw) / 2)`,
-    right: `calc((2.5vh + 2.5vw) / 2)`,
-    width: `calc((13vh + 13vw) / 2)`,
-    height: `calc((2vh + 2vw) / 2)`,
+    top: size(2.5),
+    right: size(2.5),
+    width: size(13),
+    height: size(3),
     border: '0',
     boxSizing: 'border-box',
     borderRadius: '100000px',
     backgroundColor: '#0000ff',
     color: '#ffffff',
-    fontSize: `calc((1vh + 1vw) / 2)`,
+    //fontSize: `calc((1vh + 1vw) / 2)`,
     fontFamily: 'Red Hat Display',
     fontWeight: 'bold',
     outline: 'none',
@@ -191,9 +191,11 @@ const Homepage = () => {
         <div style={styles.IconText}>AI-powered</div>
         <div style={styles.IconText}>Analytics</div>
       </div>
-    </div>
-    <div style={{...styles.IconText, position:'absolute', fontSize:size(1.5),top:size(50),left:size(85), fontWeight:'bold'}}>
+    <div style={{...styles.IconBoxInner,height:size(10),justifyContent:'left'}}>
+    <div style={{...styles.IconText, fontWeight:'bold'}}>
     ... and more
+    </div>
+    </div>
     </div>
     <div style={{...styles.Text, fontSize:size(1.25), position:'absolute', top: '95vh', left: '50%', transform: 'translateX(-50%)'}}>
     Designed and built with Love and Care
