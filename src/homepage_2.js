@@ -8,15 +8,7 @@ import chatbots from './assets/chatbot.png';
 import codeassitants from './assets/code-assistant.png';
 import marketing from './assets/marketing.png';
 import image_video from './assets/image-video-generator.jpg';
-//import logo from './assets/logo-main.png';
-// import styled from 'styled-components';
-
-
-const size = (a) =>{
-  return `calc((${a}vh + ${a}vw) / 2)`;
-}
-
-const isPhone = window.innerWidth <= 600;
+import logo from './assets/logo-main.png';
 
 const styles = {
   ImageContainer: {
@@ -25,23 +17,20 @@ const styles = {
     backgroundImage: `url(${backgroundImage})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    dispay:'flex',
-    justifyContent:'center',
-    alignItems:'center',
-    //overflowY: 'scroll',
+    overflowY: 'scroll',
   },
   Button: {
     cursor: 'pointer',
-    top: `calc((2vh + 2vw) / 2)`,
-    right: `calc((2.5vh + 2.5vw) / 2)`,
-    width: `calc((13vh + 13vw) / 2)`,
-    height: `calc((2vh + 2vw) / 2)`,
+    top: '2vh',
+    left: '87vw',
+    width: '12vw',
+    height: '2.6vw',
     border: '0',
     boxSizing: 'border-box',
     borderRadius: '100000px',
     backgroundColor: '#0000ff',
     color: '#ffffff',
-    fontSize: `calc((1vh + 1vw) / 2)`,
+    fontSize: '1vw',
     fontFamily: 'Red Hat Display',
     fontWeight: 'bold',
     outline: 'none',
@@ -53,26 +42,26 @@ const styles = {
     textAlign: 'center',
   },
   Input: {
-    //position: 'absolute',
-    //top: size(42),
-    //left: '51%', 
-    //transform: 'translateX(-52%)',
-    width: size(60),
-    height: size(3),
+    position: 'absolute',
+    top: '55vh',
+    left: '51%', 
+    transform: 'translateX(-52%)',
+    width: '50vw',
+    height: '2.5vw',
     border: '0',
     padding: '0px 1vw',
     borderRadius: '100000px',
     backgroundColor: '#ffffff',
     color: '#030303',
-    fontSize: size(1.25),
+    fontSize: '1vw',
     fontFamily: 'Red Hat Display',
     outline: 'none',
   },
   IconBoxOuter: {
     position: 'absolute',
-    width :size(50),
-    height :size(30),
-    top: size(42),
+    width :'35vw',
+    height :'18vh',
+    top: '67vh',
     left: '44.5%', 
     transform: 'translateX(-42%)',
     backgroundColor: 'transparent',
@@ -82,8 +71,8 @@ const styles = {
     alignItems: 'center',
   },
   IconBoxInner: {
-    width: size(10),
-    height: size(30),
+    width: '6vw',
+    height: '10vw',
     backgroundColor: 'transparent',
     display: 'flex',
     justifyContent: 'center',
@@ -91,8 +80,8 @@ const styles = {
     flexDirection: 'column',
   },
   IconImage: { 
-    width: size(5),
-    height: size(5),
+    width: '4vw',
+    height: '4vw',
     borderRadius: '100000px',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
@@ -101,13 +90,11 @@ const styles = {
   IconText: {
     cursor: 'pointer',
     color: '#838383',
-    fontSize: size(1.25), 
+    fontSize: '1vw', 
     fontFamily: 'Red Hat Display',
     textAlign: 'center', 
     marginTop: '-0.3vw'}
 };
-
-
 
 
 const Homepage = () => {
@@ -125,35 +112,21 @@ const Homepage = () => {
     navigate('/form');
   }
 
-  const handleKeyPress = (event) => {
-    // Check if the pressed key is "Enter" (key code 13)
-    if (event.key === 'Enter') {
-      // Call the PageChange function
-      pageChange("three");
-    }
-  }
-
   return (
     <div style={styles.ImageContainer}>
     <button style={styles.Button} onClick={() => pageChangeForm()}> 
       Post your Company
     </button>
-    <div style={{...styles.Text, position:'absolute', fontSize: size(6.5), top:size(25), fontWeight:'bold',  left: '50%', transform: 'translateX(-50%)'}}>
+    <div style={{...styles.Text, position:'absolute', fontSize:'5vw', top:'35vh', fontWeight:'bold',  left: '51%', transform: 'translateX(-52%)'}}>
       DiscoverAI
     </div>
-    <div style={{...styles.Text, position:'absolute', fontSize:size(2), top:size(35), fontWeight:'bold',  left: '50%', transform: 'translateX(-50%)'}}>
+    <div style={{...styles.Text, position:'absolute', fontSize:'1.5vw', top:'47vh', fontWeight:'bold',  left: '51%', transform: 'translateX(-52%)'}}>
       Discover your favorite AI companies around the world
     </div>
-
-    <div style={{position: 'absolute', top: size(42), left: '50%', transform: 'translateX(-50%)', width: size(75), height: size(3), justifyContent:'center', alignItems:'center', display:'flex'}}>
-  <form style={{ display: 'flex', alignItems: 'center' }}>
-    <input style={styles.Input} placeholder='Describe what you are looking for' onKeyDown={handleKeyPress}/>
-    <button type='submit' onClick={() => pageChange("three")} style={{marginLeft:size(-3),backgroundColor:'transparent',border:'0'}}>
-      <img src={searchIcon} style={{width: size(1.3), height: size(1.3)}} />
-    </button>
-  </form>
-</div>
-
+    <input style={styles.Input} placeholder='Describe what you are looking for' />
+    <div>
+      <img src={searchIcon} style={{width: '1.2vw', height: '1.2vw', position: 'absolute', top: '55.95vh', left: '74.5%', transform: 'translateX(-52%)'}} onClick={()=>pageChange("three")}/>
+    </div>
     <div style={styles.IconBoxOuter}>
       <div style={styles.IconBoxInner} onClick={() => pageChange("one")}>
         <img src={chatbots} style={styles.IconImage} />
@@ -192,10 +165,10 @@ const Homepage = () => {
         <div style={styles.IconText}>Analytics</div>
       </div>
     </div>
-    <div style={{...styles.IconText, position:'absolute', fontSize:size(1.5),top:size(50),left:size(85), fontWeight:'bold'}}>
+    <div style={{...styles.IconText, position:'absolute', fontSize:'1.5vw',top:'69vh',left:'65.5vw', fontWeight:'bold'}}>
     ... and more
     </div>
-    <div style={{...styles.Text, fontSize:size(1.25), position:'absolute', top: '95vh', left: '50%', transform: 'translateX(-50%)'}}>
+    <div style={{...styles.Text, fontsize:'1.5vw', position:'absolute', top: '95vh', left: '50%', transform: 'translateX(-50%)'}}>
     Designed and built with Love and Care
     </div>
     </div>
@@ -205,7 +178,3 @@ const Homepage = () => {
 
 export default Homepage;
 
-
-// <div>
-//       <img src={searchIcon} style={{width: '1.2vw', height: '1.2vw', position: 'absolute', top: '55.95vh', left: '74.5%', transform: 'translateX(-52%)'}} onClick={()=>pageChange("three")}/>
-//     </div>
