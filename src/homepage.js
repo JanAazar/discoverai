@@ -34,8 +34,7 @@ const styles = {
     cursor: 'pointer',
     top: size(2.5),
     right: size(2.5),
-    width: size(13),
-    height: size(3),
+    width: 'auto',
     border: '0',
     boxSizing: 'border-box',
     borderRadius: '100000px',
@@ -43,9 +42,12 @@ const styles = {
     color: '#ffffff',
     //fontSize: `calc((1vh + 1vw) / 2)`,
     fontFamily: 'Red Hat Display',
-    fontWeight: 'bold',
+    //fontWeight: 'bold',
     outline: 'none',
     position:'absolute',
+    overflow: 'hidden',
+    padding: '0.5vw 1vw',
+
   },
   Text: {
     color: '#ffffff',
